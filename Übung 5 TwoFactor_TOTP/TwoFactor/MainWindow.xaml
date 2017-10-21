@@ -1,0 +1,22 @@
+﻿<Window x:Class="TwoFactor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TwoFactor"
+        mc:Ignorable="d"
+        Title="TwoFactorauth" Height="329.413" Width="833.332">
+    <StackPanel>
+        <Label>Username:</Label>
+        <TextBox Text="{Binding Path=Username}" Margin="29,0,0,0" HorizontalAlignment="Left" Width="780"/>
+
+        <Label>Password:</Label>
+        <TextBox Text="{Binding Path=Password}" Margin="29,0,0,0" HorizontalAlignment="Left" Width="780"></TextBox>
+        <Button Margin="46,10,0,10" Click="SendButton_Click" Background="#FF0068AB" Content="Send OTP password" HorizontalAlignment="Left" Width="724"/>
+        <Label Margin="10px" Content="Enter the OTP here:"/>
+        <TextBox  Text="{Binding EnteredOTP}" Margin="29,0,0,0" HorizontalAlignment="Left" Width="780"/>
+
+
+        <Button Click="LoginButton_Click" Background="#FF0068AB" Margin="46,10,0,0" HorizontalAlignment="Left" Width="724" Content="Login"/>
+    </StackPanel>
+</Window>
